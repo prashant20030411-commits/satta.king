@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satta King Fast | Satta Result 2025</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fff; margin: 0; padding: 0; }
+        .top-header { background: #d32f2f; color: #fff; text-align: center; padding: 15px 0; border-bottom: 4px solid #000; }
+        .top-header h1 { margin: 0; font-size: 32px; font-weight: 900; letter-spacing: 1px; color: yellow; }
+        
+        /* Scrolling Marquee */
+        .marquee-box { background: yellow; border-top: 2px solid red; border-bottom: 2px solid red; padding: 5px 0; font-weight: bold; color: red; overflow: hidden; }
+        
+        .main-container { max-width: 800px; margin: 20px auto; padding: 0 10px; }
+        
+        /* Table Styling */
+        .result-table { width: 100%; border-collapse: collapse; margin-top: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .result-table th { background: #222; color: #fff; padding: 12px; font-size: 18px; border: 1px solid #444; }
+        .result-table td { padding: 18px; border: 1px solid #ccc; text-align: center; font-size: 24px; font-weight: bold; color: #333; }
+        
+        .loc-name { text-align: left; padding-left: 20px !important; color: #d32f2f; font-size: 20px; }
+        .winning-num { color: #d32f2f; font-size: 32px; }
+        
+        /* Live Blinking Dot */
+        .live-dot { height: 12px; width: 12px; background-color: #4CAF50; border-radius: 50%; display: inline-block; margin-right: 8px; animation: blink 1s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+
+        .footer-msg { background: #eee; padding: 20px; text-align: center; font-size: 14px; color: #666; margin-top: 30px; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+<div class="top-header">
+    <h1>SATTA KING FAST</h1>
+</div>
+
+<div class="marquee-box">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+        Satta King Fast Result 2025 | Gali, Desawar, Ghaziabad, Faridabad, Aligarh Live Results Update Every Minute!
+    </marquee>
+</div>
+
+<div class="main-container">
+    <table class="result-table">
+        <thead>
+            <tr>
+                <th>Location (Ghar)</th>
+                <th>Today's Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="loc-name">DESAWAR</td>
+                <td>74</td>
+            </tr>
+            <tr>
+                <td class="loc-name">GALI</td>
+                <td>12</td>
+            </tr>
+            <tr style="background: #fff9c4;">
+                <td class="loc-name"><span class="live-dot"></span>ALIGARH</td>
+                <td id="aligarh-live" class="winning-num">--</td>
+            </tr>
+            <tr>
+                <td class="loc-name">FARIDABAD</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td class="loc-name">GHAZIABAD</td>
+                <td>09</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="footer-msg">
+    Disclaimer: This website is for informational purposes only. We do not promote gambling.
+</div>
+
+<script>
+    // Config provided by you
+    const firebaseConfig = {
+        apiKey: "AIzaSyAbiXDsOnDB5Wz4Q1BZ-0_V9h2rVJTtbFk",
+        authDomain: "kingf-2c7c5.firebaseapp.com",
+        databaseURL: "https://kingf-2c7c5-default-rtdb.firebaseio.com",
+        projectId: "kingf-2c7c5",
+        storageBucket: "kingf-2c7c5.firebasestorage.app",
+        messagingSenderId: "932519197016",
+        appId: "1:932519197016:web:bd59079bc5b6034c024d2d",
+        measurementId: "G-Y750J8GGTZ"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Get live data
+    const dbRef = firebase.database().ref('live_results/aligarh');
+    dbRef.on('value', (snapshot) => {
+        const data = snapshot.val();
+        if (data && data.number) {
+            document.getElementById('aligarh-live').innerText = data.number;
+        }
+    });
+</script>
+
+</body>
+</html>
