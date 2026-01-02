@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satta King Fast | Satta Result 2025</title>
+    <title>Satta King Fast | Live Result Chart 2026</title>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fff; margin: 0; padding: 0; }
-        .top-header { background: #d32f2f; color: #fff; text-align: center; padding: 15px 0; border-bottom: 4px solid #000; }
-        .top-header h1 { margin: 0; font-size: 32px; font-weight: 900; letter-spacing: 1px; color: yellow; }
+        body { font-family: 'Arial', sans-serif; background-color: #fff; margin: 0; padding: 0; }
+        .top-header { background: #d32f2f; color: yellow; text-align: center; padding: 15px 0; border-bottom: 5px solid #000; }
+        .top-header h1 { margin: 0; font-size: 32px; font-weight: 900; text-transform: uppercase; }
         
-        /* Scrolling Marquee */
-        .marquee-box { background: yellow; border-top: 2px solid red; border-bottom: 2px solid red; padding: 5px 0; font-weight: bold; color: red; overflow: hidden; }
-        
-        .main-container { max-width: 800px; margin: 20px auto; padding: 0 10px; }
-        
-        /* Table Styling */
-        .result-table { width: 100%; border-collapse: collapse; margin-top: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .result-table th { background: #222; color: #fff; padding: 12px; font-size: 18px; border: 1px solid #444; }
-        .result-table td { padding: 18px; border: 1px solid #ccc; text-align: center; font-size: 24px; font-weight: bold; color: #333; }
-        
-        .loc-name { text-align: left; padding-left: 20px !important; color: #d32f2f; font-size: 20px; }
-        .winning-num { color: #d32f2f; font-size: 32px; }
-        
-        /* Live Blinking Dot */
-        .live-dot { height: 12px; width: 12px; background-color: #4CAF50; border-radius: 50%; display: inline-block; margin-right: 8px; animation: blink 1s infinite; }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+        .marquee-box { background: #4caf50; color: white; padding: 8px 0; font-weight: bold; border-bottom: 2px solid #000; }
 
-        .footer-msg { background: #eee; padding: 20px; text-align: center; font-size: 14px; color: #666; margin-top: 30px; border-top: 1px solid #ddd; }
+        .main-container { max-width: 900px; margin: 20px auto; padding: 0 10px; }
+
+        /* Live Table Styling */
+        .live-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; border: 2px solid #333; }
+        .live-table th { background: #333; color: #fff; padding: 12px; }
+        .live-table td { border: 1px solid #ccc; padding: 15px; text-align: center; font-size: 22px; font-weight: bold; }
+        .loc-name { text-align: left; padding-left: 20px !important; color: #d32f2f; }
+        .live-highlight { background: #fff9c4; border: 2px solid #d32f2f !important; }
+
+        /* Monthly Chart Styling (From Screenshot) */
+        .chart-header { background: #4db6ac; color: white; text-align: center; padding: 10px; font-weight: bold; border: 1px solid #333; }
+        .history-table { width: 100%; border-collapse: collapse; border: 1px solid #333; }
+        .history-table thead th { background: #ffc107; color: #000; padding: 10px; border: 1px solid #333; font-size: 14px; }
+        .history-table td { border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold; color: #444; }
+        .date-col { color: red; background: #f9f9f9; }
+
+        .live-dot { height: 12px; width: 12px; background-color: #f44336; border-radius: 50%; display: inline-block; margin-right: 8px; animation: blink 1s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
     </style>
 </head>
 <body>
@@ -38,13 +40,11 @@
 </div>
 
 <div class="marquee-box">
-    <marquee behavior="scroll" direction="left" scrollamount="6">
-        Satta King Fast Result 2025 | Gali, Desawar, Ghaziabad, Faridabad, Aligarh Live Results Update Every Minute!
-    </marquee>
+    <marquee>Satta King Live Result: Delhi Bazar, Shree Ganesh, Faridabad, Ghaziabad, Gali, Disawar Update Instantly!</marquee>
 </div>
 
 <div class="main-container">
-    <table class="result-table">
+    <table class="live-table">
         <thead>
             <tr>
                 <th>Location (Ghar)</th>
@@ -52,36 +52,41 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="loc-name">DESAWAR</td>
-                <td>74</td>
+            <tr><td class="loc-name">DELHI BAJAR</td><td>42</td></tr>
+            <tr class="live-highlight">
+                <td class="loc-name"><span class="live-dot"></span>SHREE GANESH (LIVE)</td>
+                <td id="shree-ganesh-live" style="color:red; font-size: 35px;">--</td>
             </tr>
-            <tr>
-                <td class="loc-name">GALI</td>
-                <td>12</td>
-            </tr>
-            <tr style="background: #fff9c4;">
-                <td class="loc-name"><span class="live-dot"></span>ALIGARH</td>
-                <td id="aligarh-live" class="winning-num">--</td>
-            </tr>
-            <tr>
-                <td class="loc-name">FARIDABAD</td>
-                <td>55</td>
-            </tr>
-            <tr>
-                <td class="loc-name">GHAZIABAD</td>
-                <td>09</td>
-            </tr>
+            <tr><td class="loc-name">SHIV SANKAR</td><td>18</td></tr>
+            <tr><td class="loc-name">FARIDABAD</td><td>67</td></tr>
+            <tr><td class="loc-name">GHAZIABAD</td><td>72</td></tr>
+            <tr><td class="loc-name">GALI</td><td>91</td></tr>
+            <tr><td class="loc-name">DISAWAR</td><td>35</td></tr>
         </tbody>
+    </table>
+
+    <div class="chart-header">Monthly Satta King Result Chart of January 2026</div>
+    <table class="history-table">
+        <thead>
+            <tr>
+                <th style="width: 10%;">DATE</th>
+                <th>FRBD</th>
+                <th>GZBD</th>
+                <th>GALI</th>
+                <th>DSWR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="date-col">01</td><td>86</td><td>63</td><td>44</td><td>71</td></tr>
+            <tr><td class="date-col">02</td><td>19</td><td>82</td><td>76</td><td>27</td></tr>
+            <tr><td class="date-col">03</td><td>69</td><td>91</td><td>31</td><td>72</td></tr>
+            <tr><td class="date-col">04</td><td>35</td><td>98</td><td>92</td><td>64</td></tr>
+            <tr><td class="date-col">05</td><td>67</td><td>72</td><td>92</td><td>78</td></tr>
+            </tbody>
     </table>
 </div>
 
-<div class="footer-msg">
-    Disclaimer: This website is for informational purposes only. We do not promote gambling.
-</div>
-
 <script>
-    // Config provided by you
     const firebaseConfig = {
         apiKey: "AIzaSyAbiXDsOnDB5Wz4Q1BZ-0_V9h2rVJTtbFk",
         authDomain: "kingf-2c7c5.firebaseapp.com",
@@ -94,12 +99,12 @@
     };
     firebase.initializeApp(firebaseConfig);
 
-    // Get live data
-    const dbRef = firebase.database().ref('live_results/aligarh');
+    // Listening to Shree Ganesh (your live ghar)
+    const dbRef = firebase.database().ref('live_results/shree_ganesh');
     dbRef.on('value', (snapshot) => {
         const data = snapshot.val();
         if (data && data.number) {
-            document.getElementById('aligarh-live').innerText = data.number;
+            document.getElementById('shree-ganesh-live').innerText = data.number;
         }
     });
 </script>
